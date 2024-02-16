@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } catch (error) {
             console.error('Error:', error);
         }
-    });btn2.addEventListener('click', async () => {
+    });btn2.addEventListener('click', async ()=>{
         try {
             const response = await fetch('http://localhost:3000/About');
             const data = await response.json();

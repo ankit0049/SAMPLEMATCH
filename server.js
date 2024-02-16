@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 
 const PartnerSchema = mongoose.Schema({
-    name : {
+    name  : {
         type:String ,
         required: true ,
     }
