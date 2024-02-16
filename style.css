@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)), url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 300px; /* Adjust width as needed */
+}
+
+.first {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+button:active {
+    background-color: #3e8e41; /* Change the background color when clicked */
+    transform: translateY(1px); /* Add a slight downward shift to simulate clicking */
+}
+#content {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#content p {
+    margin-bottom: 10px;
+}
+#content {
+    margin-top: 20px;
+}
+
+.partner-item {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+}
+
+.partner-item:nth-child(even) {
+    background-color: #e0e0e0; /* Light gray background for even pairs */
+}
