@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run tests
-      run: npm test
+      - name: Run tests
+        run: npm test
 
   deploy:
     runs-on: ubuntu-latest
@@ -25,16 +25,17 @@ jobs:
     if: github.ref == 'refs/heads/master'
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Deploy to production
-      env:
-        PORT: ${{ secrets.PORT }}
-        MONGO_URI: ${{ secrets.MONGO_URI }}
-      run: |
-        npm run build
-        npm run deploy
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to production
+        env:
+          PORT: ${{ secrets.PORT }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+        run: npm run deploy
