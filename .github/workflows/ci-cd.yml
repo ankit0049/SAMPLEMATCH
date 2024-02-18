@@ -33,7 +33,6 @@ jobs:
       - name: Deploy to production
         env:
           MONGO_URI: ${{ secrets.MONGO_URI }}
-          OTHER_SECRET: ${{ secrets.OTHER_SECRET }}
         run: |
           # Your deployment script or commands here
           npm run deploy
